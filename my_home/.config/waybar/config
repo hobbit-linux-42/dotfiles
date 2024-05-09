@@ -22,7 +22,8 @@
 
 	"custom/network": {
 		"format": "🛜\n",
-		"on-click": "rio -e nmtui"
+		"on-click": "rio -e nmtui",
+		"on-click-right": "rio -e $HOME/.config/waybar/wifinfo.sh"
 	},
 
 	"hyprland/workspaces": {

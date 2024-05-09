@@ -1,9 +1,9 @@
 * {
     border: none;
-    font-family: Aquire;
-    font-size: 18px;
+    font-family: "Aquire";
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 40px;
+    font-size: 20px;
 }
 window#waybar {
     background: rgba(0, 0, 0, 0);
@@ -13,7 +13,7 @@ window#waybar {
     margin: 2px 10px 0 0;
 }
 .modules-center {
-	background-color: rgba(0, 179, 104, 0.588);
+	background-color: rgba(0, 194, 171, 0.712);
     margin: 2px 0 0 0;
 }
 .modules-left {
