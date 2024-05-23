@@ -1,6 +1,7 @@
 #!/bin/bash
-nmcli dev wifi
 while true
 do
-	sleep 0
+	nmcli dev wifi
+	sleep 3
+	clear
 done

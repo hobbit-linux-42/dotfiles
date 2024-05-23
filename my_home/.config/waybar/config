@@ -21,9 +21,9 @@
 	],
 
 	"custom/network": {
-		"format": "🛜\n",
-		"on-click": "rio -e nmtui",
-		"on-click-right": "rio -e $HOME/.config/waybar/wifinfo.sh"
+		"format": "📡\n",
+		"on-click": "alacritty -e nmtui",
+		"on-click-right": "alacritty -e $HOME/.config/waybar/wifinfo.sh"
 	},
 
 	"hyprland/workspaces": {
@@ -51,8 +51,8 @@
 		"format-icons": {
 			"headphones": "",
 			"default": [
-				" ",
-				" "
+				"🔈",
+				"🔊"
 			]
 		},
 		"scroll-step": 5,
