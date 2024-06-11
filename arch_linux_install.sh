@@ -12,4 +12,5 @@ sudo git clone https://github.com/zsh-users/zsh-autosuggestions
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 sudo git clone https://github.com/MichaelAquilina/zsh-autoswitch-virtualenv.git
 sudo git clone https://github.com/agkozak/zsh-z.git
+sudo git clone https://github.com/zsh-users/zsh-history-substring-search.git
 sudo reboot
