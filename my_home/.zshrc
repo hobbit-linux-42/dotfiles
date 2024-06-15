@@ -25,6 +25,9 @@ alias neofetch="fastfetch"
 alias color_list="bat .colors"
 source ~/.colors
 HISTFILE=~/.history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
 
 ####################define#functions####################################
 

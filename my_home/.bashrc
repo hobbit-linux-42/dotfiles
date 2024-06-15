@@ -26,3 +26,8 @@ alias local-scan="nmap -sP 192.168.$(route -n | awk '{print $2}' | grep 192.168.
 source ~/.colors
 alias color_list="bat .colors"
 HISTFILE=~/.history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
+
