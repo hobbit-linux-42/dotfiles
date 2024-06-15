@@ -25,3 +25,4 @@ alias local-scan="nmap -sP 192.168.$(route -n | awk '{print $2}' | grep 192.168.
 #eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source ~/.colors
 alias color_list="bat .colors"
+HISTFILE=~/.history

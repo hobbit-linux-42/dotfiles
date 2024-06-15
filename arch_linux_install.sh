@@ -7,6 +7,7 @@ sudo pacman -S git hyprland waybar rio sddm micro dunst alacritty bat zsh python
 cp my_home/.bashrc $HOME/.bashrc
 cp my_home/.colors $HOME/.colors
 cp my_home/.zshrc $HOME/.zshrc
+touch $HOME/.history
 
 #rofi
 cp -r my_home/.local/share/rofi $HOME/.local/share/
