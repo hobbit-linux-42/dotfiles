@@ -1,7 +1,7 @@
 
 #packages
 sudo pacman -Syu
-sudo pacman -S git hyprland waybar rio sddm micro dunst alacritty bat zsh python3 rofi
+sudo pacman -S git hyprland waybar rio sddm micro dunst alacritty bat zsh python3 rofi neovim
 
 #home
 cp my_home/.bashrc $HOME/.bashrc
@@ -17,6 +17,7 @@ cd my_home/.config
 cp -r waybar $HOME/.config
 cp -r rio $HOME/.config
 cp -r hypr $HOME/.config  
+cp -r nvim $HOME/.config
 
 #zsh
 cd /usr/share
