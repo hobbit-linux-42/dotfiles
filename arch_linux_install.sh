@@ -28,4 +28,5 @@ sudo git clone https://github.com/zsh-users/zsh-history-substring-search.git
 sudo chsh $USER -s /bin/zsh
 
 #reboot
+sudo systemctl enable sddm.service
 sudo reboot
