@@ -1,7 +1,8 @@
 
 #packages
+pkgs="git hyprland waybar rio sddm micro dunst alacritty bat zsh python3 rofi neovim"
 sudo pacman -Syu
-sudo pacman -S git hyprland waybar rio sddm micro dunst alacritty bat zsh python3 rofi neovim
+sudo pacman -S $pkgs
 
 #home
 cp my_home/.bashrc $HOME/.bashrc
@@ -18,6 +19,7 @@ cp -r waybar $HOME/.config
 cp -r rio $HOME/.config
 cp -r hypr $HOME/.config  
 cp -r nvim $HOME/.config
+cp -r sakura $HOME/.config
 
 #zsh
 cd /usr/share
