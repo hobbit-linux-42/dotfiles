@@ -12,13 +12,13 @@
 # Default cursor is Block
 # Other available options are: '_' and '|'
 #
-cursor = '▇'
+#cursor = '|'
 
 # Blinking Cursor
 #
 # Default is false
 #
-blinking-cursor = false
+blinking-cursor = true
 
 # Ignore theme selection foreground color
 #
@@ -35,7 +35,10 @@ blinking-cursor = false
 #
 # Example:
 
- theme = "Banana Blueberry" # "ayu" "Desert" "ayu" "Doom Peacock" 
+theme = "ayu" #"Banana Blueberry" "Desert" "ayu" "Doom Peacock" 
+ 
+[window]
+opacity = 0.92
 
 # Padding-x
 #
