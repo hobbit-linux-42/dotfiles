@@ -1,8 +1,9 @@
 
 #packages
-pkgs="git hyprland waybar rio sddm micro dunst alacritty bat zsh python3 rofi neovim"
+pkgs="git hyprland waybar rio sddm micro dunst alacritty bat zsh python3 rofi neovim flatpak"
 sudo pacman -Syu
 sudo pacman -S $pkgs
+flatpak install flathub app.zen_browser.zen
 
 #home
 cp my_home/.bashrc $HOME/.bashrc
