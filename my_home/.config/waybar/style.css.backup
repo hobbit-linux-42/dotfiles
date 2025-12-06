@@ -6,20 +6,20 @@ window#waybar {
     all: unset;
 }
 .modules-left {
-    margin: 10px 0px 5px 5px;
+    margin: 10px 0px 5px 10px;
 }
 .modules-center {
-    margin: 0px 0px 5px 5px;
+    margin: 10px 0px 5px 0px;
 }
 .modules-right {
-    margin: 10px 0px 5px 5px;
+    margin: 10px 10px 5px 0px;
 }
 .modules-left,
 .modules-center,
 .modules-right {
     padding: 7px;
     border-radius: 10px;
-    background: rgba(25, 0, 46, 0.6);
+    background: rgba(25, 0, 46, 0.5);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
 }
 tooltip {

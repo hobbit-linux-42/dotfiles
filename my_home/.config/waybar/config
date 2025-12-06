@@ -1,117 +1,105 @@
-// -*- mode: json -*-
-
 {
-	"layer": "top",
-	"position": "left",
+    "layer": "top",
+    "position": "left",
+    "reload_style_on_change": true,
+    "modules-center": ["network", "clock#clock", "pulseaudio#speaker"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": ["pulseaudio#microphone", "clock#date", "bluetooth", "network", "custom/powerprofile", "battery"],
 
-	"modules-right": [
-		"wlr/taskbar",
-	],
-	"modules-left": [
-		"hyprland/workspaces",
-	],
-	"modules-center": [
-		"pulseaudio",
-		"memory",
-		"cpu",
-		//"custom/left-arrow-light",
-		//"custom/left-arrow-dark",
-		//"battery",
-		"custom/network"
-	],
-
-	"custom/network": {
-		"format": "📡\n",
-		"on-click": "alacritty -e nmtui",
-		"on-click-right": "alacritty -e $HOME/.config/waybar/wifinfo.sh"
-	},
-
-	"hyprland/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
-
-	"clock#1": {
-		"format": "{:%a}",
-		"tooltip": false
-	},
-	"clock#2": {
-		"format": "{:%H:%M}",
-		"tooltip": false
-	},
-	"clock#3": {
-		"format": "{:%m-%d}",
-		"tooltip": false
-	},
-
-	"pulseaudio": {
-		"format": "\n{icon}\n",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "\n🔇\n",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"🔈",
-				"🔊"
-			]
-		},
-		"scroll-step": 5,
-		"on-click-right": "paplay $HOME/.config/waybar/ping.ogg &",
-		"on-click": "pavucontrol"
-	},
-	"memory": {
-		"interval": 5,
-		"format": "🎞️\n"
-	},
-	"cpu": {
-		"interval": 5,
-		"format": "🔳\n"
-	},
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon} {capacity}%",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		]
-	},
-	"disk": {
-		"interval": 5,
-		"format": "🖴\n{percentage_used:2}%",
-		"path": "/"
-	},
-	"tray": {
-		"icon-size": 20
-	},
-	"wlr/taskbar": {
-	    "format": "{icon}",
-	    "icon-size": 25,
-	    "tooltip-format": "{title}",
-	    "on-click": "activate",
-	    "on-click-right": "close",
-	},
-	"hyprland/workspaces": {
-		"format": "{icon}",
-		"on-click": "activate",
-		"format-icons": {
-		  "1": "🟢",
-		  "2": "🟢",
-		  "3": "🟢",
-		  "4": "🟢",
-		  "5": "🟢",
-		  "6": "🟢",
-		  "7": "🟢",
-		  "8": "🟢",
-		  "9": "🟢",
-		  "active": "🔴"
-		},
-		"sort-by-number": true
-	}
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
+        }
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    },
+    "clock#clock": {
+        "format": " ",
+        "interval": 1,
+        "tooltip-format": "{:%H:%M:%S}"
+    },
+    "clock#date": {
+        "format": "󰸗 ",
+        "interval": 1,
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+    "network": {
+        "interval": 1,
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "",
+        "on-click": "rio -e nmtui",
+        "tooltip-format-disconnected": "No Internet Connection",
+        "tooltip-format-wifi": "{essid}",
+        "tooltip-format-ethernet": "{ifname}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+    "bluetooth": {
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
+        "tooltip-format": "{num_connections} Device(s) Connected",
+        "tooltip-format-connected": "{device_alias} Connected",
+        "on-click": "wezterm -e bluetui"
+    },
+    "battery": {
+        "interval": 1,
+        "states": {
+            "good": 100,
+            "ok": 70,
+            "warning": 50,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+    },
+    "pulseaudio#speaker": {
+        "scroll-step": 10,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "format": "{icon}",
+        "format-muted": "󰝟 ",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "tooltip-format": "{volume}%"
+    },
+    "pulseaudio#microphone": {
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pavucontrol",
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted":"",
+    },
+    "custom/powerprofile": {
+        "format": "󰓅",
+        "interval": 1,
+        "exec": "powerprofilesctl get",
+        "on-click": "powerprofilesctl set performance",
+        "on-click-right": "powerprofilesctl set power-saver",
+        "tooltip-format": "{text}"
+    },
+    "hyprland/language": {
+        "format": "󰌌 {}",
+        "format-gr": "GR",
+        "format-en": "EN",
+        "tooltip": false
+    },
 }
+
+
+# Most of the labels were mostly re-written (bluetooth, battery and pulseaudio) to cover functionality I wanted as well as simplify the functionality they oroginally
+# had as I did not need a resource monitor that it originally had and some other minor details that I forget
+# As always the colors were changed to match the theme
+# Lastly modified by Dimitrios Psaroudakis at 6/5/2025
